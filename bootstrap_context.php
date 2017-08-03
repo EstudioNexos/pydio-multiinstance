@@ -43,9 +43,12 @@ if(!defined("AJXP_VERSION")){
 }
 
 define("AJXP_EXEC", true);
-
+//get subdomain
+$subdomain = explode('.', $_SERVER['SERVER_NAME'], 2)[0];
 // APPLICATION PATHES CONFIGURATION
-define("AJXP_DATA_PATH", "/home/freepress/pydio/data");
+//define("AJXP_DATA_PATH", "/var/lib/pydio/data");
+// data path per subdomain
+define("AJXP_DATA_PATH", AJXP_INSTALL_PATH."/".$subdomain);
 define("AJXP_CACHE_DIR", AJXP_DATA_PATH."/cache");
 define("AJXP_SHARED_CACHE_DIR", AJXP_DATA_PATH."/shared-cache");
 define("AJXP_PLUGINS_CACHE_FILE", AJXP_CACHE_DIR."/plugins_cache.ser");
