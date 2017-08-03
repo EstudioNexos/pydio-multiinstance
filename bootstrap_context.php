@@ -26,9 +26,6 @@ if (function_exists("xdebug_disable")) {
     xdebug_disable();
 }
 @error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
-//@error_reporting(E_ALL );
-//error_reporting(-1);
-//echo "Hello";
 //Windows users may have to uncomment this
 //setlocale(LC_ALL, '');
 @libxml_disable_entity_loader(false);
